@@ -24,7 +24,7 @@ public class MachineStrikeController {
                 this.gridMachineStrike.add(t.getImageOfTiles(), i, j);
                 if (i==j){
                     // placer un joueur
-                    Player p = new Player("Charger", "Dash");
+                    Piece p = new Piece("Charger", "Dash");
                     this.gridMachineStrike.add(p.getImagePlayer(), i, j);
 
 
