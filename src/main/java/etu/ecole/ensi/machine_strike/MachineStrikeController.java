@@ -10,5 +10,5 @@ public class MachineStrikeController {
     // TEST COMMIT FROM IntelliJ
     // TEST 2 Commit
 
-    // TEST Nader's COMMIT - 2
+    // TEST Nader's COMMIT -  2
 }
