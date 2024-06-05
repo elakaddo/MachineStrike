@@ -17,6 +17,7 @@ public class MachineStrikeMain extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
         stage.setTitle("Machine Strike - Projet 2024");
         stage.setScene(scene);
+        stage.setFullScreen(true);
         stage.show();
     }
 

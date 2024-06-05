@@ -22,11 +22,15 @@ public class MachineStrikeController {
             for (int j = 0; j < 8; j++) {
                 Tile t = new Tile("Grassland");
                 this.gridMachineStrike.add(t.getImageOfTiles(), i, j);
-                if (i==j && i==0){
+                if (i==j){
                     // placer un joueur
+                    Player p = new Player("Charger", "Dash");
+                    this.gridMachineStrike.add(p.getImagePlayer(), i, j);
+
 
                 }
             }
         }
+
     }
 }
