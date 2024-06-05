@@ -22,6 +22,10 @@ public class MachineStrikeController {
             for (int j = 0; j < 8; j++) {
                 Tile t = new Tile("Grassland");
                 this.gridMachineStrike.add(t.getImageOfTiles(), i, j);
+                if (i==j && i==0){
+                    // placer un joueur
+
+                }
             }
         }
     }
