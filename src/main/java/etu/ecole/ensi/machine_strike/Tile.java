@@ -39,6 +39,9 @@ public class Tile {
         return pathToTiles + this.getNameImage() + extentionImg;
     }
 
+    /**
+     * Méthode qui affecte une image à une case de la grille
+     * */
     public void setImageToTile(){
         Image i = new Image(Objects.requireNonNull(getClass().getResource(this.getPathToImg())).toString());
         this.image = new ImageView(i);
