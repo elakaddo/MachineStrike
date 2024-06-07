@@ -43,8 +43,14 @@ public class Tile {
      * Méthode qui affecte une image à une case de la grille
      * */
     public void setImageToTile(){
-        Image i = new Image(Objects.requireNonNull(getClass().getResource(this.getPathToImg())).toString());
-        this.image = new ImageView(i);
+        try{
+            Image i = new Image(String.valueOf(getClass().getResource(this.getPathToImg())));
+            this.image = new ImageView(i);
+            this.image.setFitHeight(85);
+            this.image.setFitWidth(85);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     /**
