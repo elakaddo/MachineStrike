@@ -1,30 +1,24 @@
 package etu.ecole.ensi.machine_strike;
 
 
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Objects;
-
 /**
  * Classe MachineStrikeController est un controleur qui gère le jeu Machine Strike
  * */
 public class MachineStrikeController {
+
+
+    @FXML private ImageView imgPlayerOne;
+
+    @FXML private ImageView imgPlayerTwo;
 
     private Player playerOne = new Player("Mohamed", 0);
     private Player playerTwo = new Player("nader", 0.9);
@@ -34,12 +28,13 @@ public class MachineStrikeController {
 
     private Piece selectedPiece = null;
 
-    public int selectedRow=-1;
-    public int selectedCol=-1;
+    private int hoverOnRow = -1;
+    private int hoverOnCol = -1;
+
 
     /* SET Pieces for everyone to test */
     private void setPlayersPieces(){
-        playerOne.addPiece(new Piece("Charger", "Dash", playerOne.getAdjutColorValue(), 0,0));
+        playerOne.addPiece(new Piece("Scrapper", "Gunner", playerOne.getAdjutColorValue(), 0,0));
         playerTwo.addPiece(new Piece("Charger", "Dash", playerTwo.getAdjutColorValue(),7,3));
     }
 
@@ -113,7 +108,6 @@ public class MachineStrikeController {
      * */
     public void setTerrain(String name, int col, int row){
         Tile t = new Tile(name);
-
         gridMachineStrike.add(t.getImageOfTiles(), col, row);
 
     }
@@ -160,10 +154,6 @@ public class MachineStrikeController {
         this.gridMachineStrike.add(piece.getImagePiece(), piece.getCol(), piece.getRow());
     }
 
-    private void setSelectedRowCol(Integer rowIndex, Integer columnIndex) {
-        this.selectedRow = rowIndex;
-        this.selectedCol = columnIndex;
-    }
 
     public void playMoveFromTo(ActionEvent actionEvent) {
         System.out.println("Entred playMoveFromTo");
@@ -188,5 +178,33 @@ public class MachineStrikeController {
             this.actifPlayer = playerOne;
         }
         nbMoves=0;
+    }
+
+    public void entredOnPane(MouseEvent mouseEvent) {
+        Node n = mouseEvent.getPickResult().getIntersectedNode();
+        if(!(n instanceof GridPane)){
+            if(GridPane.getRowIndex(n) != null && GridPane.getColumnIndex(n)!= null) {
+                if (GridPane.getRowIndex(n) != hoverOnRow || GridPane.getColumnIndex(n) != hoverOnCol) {
+                    hoverOnRow = GridPane.getRowIndex(n);
+                    hoverOnCol = GridPane.getColumnIndex(n);
+                    Piece p = playerOne.getPieceWhitCoordinates( hoverOnRow, hoverOnCol);
+                    if(p != null){
+                        System.out.println("Coordinates : " + hoverOnCol + " : " + hoverOnRow +"\n");
+
+                        this.imgPlayerOne.setImage(new Image(getClass().getResourceAsStream(p.getPathToImg(false))));
+
+                    }
+                    else{
+                        Piece p2= playerTwo.getPieceWhitCoordinates(hoverOnRow, hoverOnCol);
+                        if(p2 != null) {
+                            System.out.println("Coordinates : " + hoverOnCol + " : " + hoverOnRow + "\n");
+                            this.imgPlayerOne.setImage(new Image(getClass().getResourceAsStream(p2.getPathToImg(false))));
+                        }
+
+                    }
+
+                }
+            }
+        }
     }
 }

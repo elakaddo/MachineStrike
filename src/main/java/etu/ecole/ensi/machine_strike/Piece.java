@@ -34,7 +34,7 @@ public class Piece {
      * Méthode qui affecte une image à une case de la grille
      * */
     public void setImageToPiece(){
-        Image i = new Image(Objects.requireNonNull(getClass().getResource(this.getPathToImg())).toString());
+        Image i = new Image(Objects.requireNonNull(getClass().getResource(this.getPathToImg(true))).toString());
         this.image = new ImageView(i);
         this.image.setFitHeight(70);
         this.image.setFitWidth(70);
@@ -45,10 +45,12 @@ public class Piece {
         this.image.setClip(clip);
     }
 
-    private String getPathToImg() {
+    public String getPathToImg(Boolean isIcon) {
         String pathToPieces = "Images/Pieces/"+ getPieceType()+"_type"+"/";
         String extensionImg = ".jpg";
-        return pathToPieces + getPieceType()+"_"+ this.getNamePiece()+"_icon" + extensionImg;
+        if (isIcon)
+            return pathToPieces + getPieceType()+"_"+ this.getNamePiece()+"_icon" + extensionImg;
+        return pathToPieces + getPieceType()+"_"+ this.getNamePiece()+ extensionImg;
 
     }
 
