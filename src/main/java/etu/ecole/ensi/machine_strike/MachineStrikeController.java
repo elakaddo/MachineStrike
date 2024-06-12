@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
 import java.time.Duration;
@@ -47,6 +48,23 @@ public class MachineStrikeController {
     @FXML
     Button move;
 
+    @FXML
+    public void clickGridPane(MouseEvent mouseEvent) {
+        Node n = mouseEvent.getPickResult().getIntersectedNode();
+        if(!(n instanceof GridPane)){
+            System.out.println("Cliquez ici ");
+            System.out.println("Cordinates : "+ GridPane.getRowIndex(n) + " : "+ GridPane.getColumnIndex(n));
+            if(this.selectedPiece == null) {
+                System.out.println("Clicked on Node");
+                this.selectedPiece = getSelectedPiece(actifPlayer, GridPane.getRowIndex(n), GridPane.getColumnIndex(n));
+            }else {
+                System.out.println("Else clicked on node");
+                this.selectedPiece = deplacer(selectedPiece, GridPane.getRowIndex(n), GridPane.getColumnIndex(n));
+                if (nbMoves == 2)
+                    switchPlayers();
+                }
+            }
+        }
 
 
     @FXML
@@ -60,20 +78,6 @@ public class MachineStrikeController {
 
         /* AJOUTER DES PIECES SUR LA GRILLE */
         addStartPiecesOfPlayers();
-
-        this.gridMachineStrike.getChildren().forEach(item -> {
-            item.setOnMouseClicked(e -> {
-                if(this.selectedPiece == null) {
-                    System.out.println("Clicked on Node");
-                    this.selectedPiece = getSelectedPiece(actifPlayer, GridPane.getRowIndex(item), GridPane.getColumnIndex(item));
-                }else {
-                    System.out.println("Else clicked on node");
-                    this.selectedPiece = deplacer(selectedPiece, GridPane.getRowIndex(item), GridPane.getColumnIndex(item));
-                    if (nbMoves == 2)
-                        switchPlayers();
-                }
-            });
-        });
     }
 
     /**
@@ -109,7 +113,9 @@ public class MachineStrikeController {
      * */
     public void setTerrain(String name, int col, int row){
         Tile t = new Tile(name);
+
         gridMachineStrike.add(t.getImageOfTiles(), col, row);
+
     }
 
 

@@ -60,7 +60,9 @@ public class Piece {
     }
 
     public ImageView getImagePiece() {
+
         setImageToPiece();
+        this.image.setMouseTransparent(true);
         return this.image;
     }
 
@@ -88,6 +90,12 @@ public class Piece {
     public void setPositionXY(int positionX, int positionY) {
         this.row = positionX;
         this.col = positionY;
+    }
+    public int getPositionRow() {
+        return row;
+    }
+    public int getPositionCol( ) {
+        return col;
     }
 
 }
