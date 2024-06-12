@@ -15,6 +15,7 @@ public class MachineStrikeMain extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MachineStrikeMain.class.getResource("MachineStrike-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
+        scene.getStylesheets().add(String.valueOf(MachineStrikeMain.class.getResource("style.css")));
         stage.setTitle("Machine Strike - Projet 2024");
         stage.setScene(scene);
         stage.setFullScreen(true);

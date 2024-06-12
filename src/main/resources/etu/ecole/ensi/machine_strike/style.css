@@ -1,0 +1,7 @@
+.root{
+    -fx-background-size: contain, contain, contain, contain, contain, contain;
+    -fx-background-position: bottom, bottom, bottom, bottom, bottom, bottom;
+    -fx-background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x;
+    -fx-background-image:
+            url("https://img.freepik.com/free-photo/dark-fantasy-creature-scene_23-2151136222.jpg?t=st=1718027167~exp=1718030767~hmac=87a94f807aa569ac5e745475973188704638276b9756423ded42e921df05fdd3&w=1800")
+}
