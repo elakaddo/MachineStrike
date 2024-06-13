@@ -13,7 +13,7 @@ public class Piece {
     private String PieceType;
     private int power;
     private int range;
-    private int mouvement_range;
+    private int mouvementRange;
     private int health;
 
     private int row;
@@ -28,6 +28,225 @@ public class Piece {
         this.colorAdjut = colorAdjut;
         this.row = row;
         this.col = col;
+        if(namePiece.equals("Charger")){
+            mouvementRange= 3;
+        }
+        else if (namePiece.equals("Thunderjaw")){
+            mouvementRange=3;
+        }
+        else if (namePiece.equals("Scorcher")){
+            mouvementRange=2;
+        }
+        else if (namePiece.equals("Scrapper")){
+            mouvementRange=2;
+            power= 3;
+            range= 2;
+            health=5;
+        }
+        else if (namePiece.equals("Longleg")){
+            mouvementRange=2;
+            power= 1;
+            range= 2;
+            health=6;
+        }
+        else if (namePiece.equals("Behemoth")){
+            mouvementRange=2;
+            power= 3;
+            range= 2;
+            health=10;
+        }
+        else if (namePiece.equals("Bellowback")){
+            mouvementRange=2;
+            power= 3;
+            range= 2;
+            health=7;
+        }
+        else if (namePiece.equals("Elemental_Clawstrider")){
+            mouvementRange=2;
+            power= 3;
+            range= 2;
+            health=8;
+        }
+        else if (namePiece.equals("Ravager")){
+            mouvementRange=2;
+            power= 2;
+            range= 2;
+            health=9;
+        }
+        else if (namePiece.equals("Redeye_Watcher")){
+            mouvementRange=2;
+            power= 2;
+            range= 2;
+            health=5;
+        }
+        else if (namePiece.equals("Rockbreaker")){
+            mouvementRange=3;
+            power= 3;
+            range= 2;
+            health=9;
+        }
+        else if (namePiece.equals("Burrower")){
+            mouvementRange= 2;
+            power= 2;
+            range= 1;
+            health=4;
+        }
+        else if (namePiece.equals("Clawstrider")){
+            mouvementRange= 2;
+            power= 3;
+            range= 2;
+            health=8;
+        }
+        else if (namePiece.equals("Leaplasher")){
+            mouvementRange= 4;
+            power= 1;
+            range= 1;
+            health=3;
+        }
+        else if (namePiece.equals("Scrounger")){
+            mouvementRange= 3;
+            power= 2;
+            range= 1;
+            health=5;
+        }
+        else if (namePiece.equals("Apex_Clawstrider")){
+            mouvementRange= 2;
+            power= 3;
+            range= 1;
+            health=8;
+        }
+        else if (namePiece.equals("Clamberjaw")){
+            mouvementRange= 3;
+            power= 3;
+            range= 1;
+            health=8;
+        }
+        else if (namePiece.equals("Fireclaw")){
+            mouvementRange= 3;
+            power= 4;
+            range= 2;
+            health=10;
+        }
+        else if (namePiece.equals("Frostclaw")){
+            mouvementRange= 2;
+            power= 4;
+            range= 2;
+            health=10;
+        }
+        else if (namePiece.equals("Rollerback")){
+            mouvementRange= 3;
+            power= 3;
+            range= 2;
+            health=5;
+        }
+        else if (namePiece.equals("Shell-Walker")){
+            mouvementRange= 2;
+            power= 2;
+            range= 1;
+            health=7;
+        }
+        else if (namePiece.equals("Slaughterspine")){
+            mouvementRange= 2;
+            power= 4;
+            range= 1;
+            health=15;
+        }
+        else if (namePiece.equals("Spikesnout")){
+            mouvementRange= 2;
+            power= 2;
+            range= 1;
+            health=5;
+        }
+        else if (namePiece.equals("Stalker")){
+            mouvementRange= 3;
+            power= 4;
+            range= 2;
+            health=5;
+        }
+        else if (namePiece.equals("Tracker_Burrower")){
+            mouvementRange= 2;
+            power= 2;
+            range= 1;
+            health=4;
+        }
+        else if (namePiece.equals("Widemaw")){
+            mouvementRange= 2;
+            power= 3;
+            range= 2;
+            health=7;
+        }
+        else if (namePiece.equals("Shellsnapper")){
+            mouvementRange= 2;
+            power= 3;
+            range= 3;
+            health=10;
+        }
+        else if (namePiece.equals("Snapmaw")){
+            mouvementRange= 2;
+            power= 3;
+            range= 3;
+            health=7;
+        }
+        else if (namePiece.equals("Fanghorn")){
+            mouvementRange= 2;
+            power= 2;
+            range= 2;
+            health=5;
+        }
+        else if (namePiece.equals("Grazer")){
+            mouvementRange= 2;
+            power= 1;
+            range= 1;
+            health=4;
+        }
+        else if (namePiece.equals("Lancehorn")){
+            mouvementRange= 2;
+            power= 2;
+            range= 2;
+            health=5;
+        }
+        else if (namePiece.equals("Bristleback")){
+            mouvementRange= 3;
+            power= 2;
+            range= 1;
+            health= 4;
+        }
+        else if (namePiece.equals("Plowhorn")){
+            mouvementRange= 2;
+            power= 2;
+            range= 1;
+            health= 5;
+        }
+        else if (namePiece.equals("Glinthawk")){
+            mouvementRange= 3;
+            power= 2;
+            range= 3;
+            health= 5;
+        }
+        else if (namePiece.equals("Skydrifter")){
+            mouvementRange= 2;
+            power= 2;
+            range= 3;
+            health= 6;
+        }
+        else if (namePiece.equals("Dreadwing")){
+            mouvementRange= 2;
+            power= 3;
+            range= 3;
+            health= 9;
+        }
+        else if (namePiece.equals("Sunwing")){
+            mouvementRange= 3;
+            power= 2;
+            range= 3;
+            health= 7;
+        }
+
+
+
+
+
+
     }
 
     /**
@@ -99,5 +318,17 @@ public class Piece {
     public int getPositionCol( ) {
         return col;
     }
+    public int getMouvementRange(){
+        return mouvementRange;
+    }
+    public int getHealth(){
+        return health;
+    }
 
+    public int getPower() {
+        return power;
+    }
+    public int getRange() {
+        return range;
+    }
 }
