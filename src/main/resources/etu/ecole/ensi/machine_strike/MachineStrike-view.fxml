@@ -301,14 +301,6 @@
                   </Label>
                </children>
             </HBox>
-            <ImageView fx:id="imgPlayerTwo" fitHeight="454.0" fitWidth="310.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="SOMETIMES">
-               <image>
-                  <Image url="@Images/Pieces/Dash_type/Dash_Charger.jpg" />
-               </image>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </ImageView>
          </children>
       </VBox>
    </right>
