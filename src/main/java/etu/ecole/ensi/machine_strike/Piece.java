@@ -241,16 +241,11 @@ public class Piece {
             range= 3;
             health= 7;
         }
-
-
-
-
-
-
     }
 
     /**
      * Méthode qui affecte une image à une case de la grille
+     * @author HADJOUDJ Nader
      * */
     public void setImageToPiece(){
         Image i = new Image(Objects.requireNonNull(getClass().getResource(this.getPathToImg(true))).toString());

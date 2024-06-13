@@ -5,12 +5,12 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
@@ -19,7 +19,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="etu.ecole.ensi.machine_strike.MachineStrikeController">
    <center>
-      <GridPane fx:id="gridMachineStrike" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickGridPane" onMouseMoved="#entredOnPane" prefHeight="700.0" prefWidth="700.0">
+      <GridPane fx:id="gridMachineStrike" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickGridPane" onMouseMoved="#entredOnPane" prefHeight="750.0" prefWidth="800.0" vgap="5.0">
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -41,23 +41,18 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
          </rowConstraints>
          <effect>
-            <DropShadow height="15.1" radius="12.21" spread="0.84" width="35.74">
+            <DropShadow height="29.73" radius="9.879999999999999" width="11.79">
                <color>
-                  <Color red="0.21052631735801697" green="0.0736842080950737" />
+                  <Color red="0.6842105388641357" green="0.6757634878158569" blue="0.6715399622917175" />
                </color>
             </DropShadow>
          </effect>
       </GridPane>
    </center>
    <left>
-      <VBox prefHeight="200.0" prefWidth="273.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="470.0" prefWidth="304.0">
          <children>
-            <Label text="Player 1 " textFill="#b06612">
-               <font>
-                  <Font name="Charter Black" size="20.0" />
-               </font>
-            </Label>
-            <HBox prefHeight="47.0" prefWidth="270.0">
+            <HBox layoutX="16.0" layoutY="51.0" prefHeight="47.0" prefWidth="270.0">
                <children>
                   <Rectangle arcHeight="30.0" arcWidth="13.0" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
                      <HBox.margin>
@@ -155,21 +150,7 @@
                   <Rectangle arcHeight="30.0" arcWidth="13.0" fill="#99897777" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" />
                </children>
             </HBox>
-            <HBox prefHeight="30.0" prefWidth="273.0">
-               <children>
-                  <Label text="VP = " textFill="#b06612">
-                     <font>
-                        <Font name="Charter Black" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label text="3" textFill="#b06612">
-                     <font>
-                        <Font name="Charter Black" size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <ImageView fx:id="imgPlayerOne" fitHeight="464.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgPlayerOne" fitHeight="464.0" fitWidth="273.0" layoutX="69.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" styleClass="imgPieceInfo">
                <image>
                   <Image url="@Images/Pieces/Dash_type/More_dash/Dash_Thunderjaw.jpg" />
                </image>
@@ -177,18 +158,37 @@
                   <DropShadow />
                </effect>
             </ImageView>
+            <Label layoutX="17.0" layoutY="3.0" text="Player 1 " textFill="#b06612">
+               <font>
+                  <Font name="Charter Black" size="35.0" />
+               </font>
+            </Label>
+            <HBox layoutX="21.0" layoutY="94.0" prefHeight="30.0" prefWidth="163.0">
+               <children>
+                  <Label text="VP = " textFill="#b06612">
+                     <font>
+                        <Font name="Charter Black" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label text="3" textFill="#b06612">
+                     <font>
+                        <Font name="Charter Black" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
          </children>
-      </VBox>
+      </AnchorPane>
    </left>
    <right>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="750.0" prefWidth="290.0">
          <children>
             <Label text="Player 2" textFill="#ab0900">
                <font>
-                  <Font name="Charter Black" size="20.0" />
+                  <Font name="Charter Black" size="35.0" />
                </font>
             </Label>
-            <HBox prefHeight="40.0" prefWidth="270.0">
+            <HBox layoutX="-2.0" layoutY="41.0" prefHeight="40.0" prefWidth="270.0">
                <children>
                   <Rectangle arcHeight="30.0" arcWidth="13.0" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
                      <HBox.margin>
@@ -287,21 +287,21 @@
                   <Rectangle arcHeight="30.0" arcWidth="13.0" fill="#59464226" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" />
                </children>
             </HBox>
-            <HBox prefHeight="32.0" prefWidth="270.0">
+            <HBox layoutX="2.0" layoutY="83.0" prefHeight="32.0" prefWidth="110.0">
                <children>
                   <Label text="VP = " textFill="#ab0900">
                      <font>
-                        <Font name="Charter Black" size="20.0" />
+                        <Font name="Charter Black" size="27.0" />
                      </font>
                   </Label>
                   <Label text="4" textFill="#b06612">
                      <font>
-                        <Font name="Charter Black" size="20.0" />
+                        <Font name="Charter Black" size="27.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
          </children>
-      </VBox>
+      </AnchorPane>
    </right>
 </BorderPane>

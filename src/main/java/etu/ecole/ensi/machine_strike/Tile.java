@@ -8,6 +8,7 @@ import java.util.Objects;
 
 /**
  * Classe Tile représente une case dans la grille GridPane
+ * @author  AKADDAR Mohamed & Nader HADJOUDJ
  * */
 public class Tile {
 
