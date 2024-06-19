@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -14,7 +15,6 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="etu.ecole.ensi.machine_strike.MachineStrikeController">
@@ -50,106 +50,8 @@
       </GridPane>
    </center>
    <left>
-      <AnchorPane prefHeight="470.0" prefWidth="304.0">
+      <AnchorPane prefHeight="750.0" prefWidth="462.0">
          <children>
-            <HBox layoutX="16.0" layoutY="51.0" prefHeight="47.0" prefWidth="270.0">
-               <children>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                     <fill>
-                        <RadialGradient centerX="0.5221606648199446" centerY="0.3812351543942993" focusAngle="21.74" focusDistance="-0.5317919075144508" radius="0.6734104046242775">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.8815789222717285" green="0.49112653732299805" blue="0.0448952242732048" opacity="0.9300000071525574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.006711409395973154">
-                                 <color>
-                                    <Color red="0.8815789222717285" green="0.49112653732299805" blue="0.0448952242732048" opacity="0.9300000071525574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.5899999737739563" green="0.36147332191467285" blue="0.10029999911785126" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </fill>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                     <fill>
-                        <RadialGradient centerX="0.5221606648199446" centerY="0.3812351543942993" focusAngle="21.74" focusDistance="-0.5317919075144508" radius="0.6734104046242775">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.8815789222717285" green="0.49112653732299805" blue="0.0448952242732048" opacity="0.9300000071525574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.006711409395973154">
-                                 <color>
-                                    <Color red="0.8815789222717285" green="0.49112653732299805" blue="0.0448952242732048" opacity="0.9300000071525574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.5899999737739563" green="0.36147332191467285" blue="0.10029999911785126" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </fill>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                     <fill>
-                        <RadialGradient centerX="0.5221606648199446" centerY="0.3812351543942993" focusAngle="21.74" focusDistance="-0.5317919075144508" radius="0.6734104046242775">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.8815789222717285" green="0.49112653732299805" blue="0.0448952242732048" opacity="0.9300000071525574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.006711409395973154">
-                                 <color>
-                                    <Color red="0.8815789222717285" green="0.49112653732299805" blue="0.0448952242732048" opacity="0.9300000071525574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.5899999737739563" green="0.36147332191467285" blue="0.10029999911785126" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </fill>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" fill="#99897777" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" fill="#99897777" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" fill="#99897777" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" fill="#99897777" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" />
-               </children>
-            </HBox>
             <ImageView fx:id="imgPlayerOne" fitHeight="464.0" fitWidth="273.0" layoutX="69.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" styleClass="imgPieceInfo">
                <image>
                   <Image url="@Images/Pieces/Dash_type/More_dash/Dash_Thunderjaw.jpg" />
@@ -158,150 +60,162 @@
                   <DropShadow />
                </effect>
             </ImageView>
-            <Label layoutX="17.0" layoutY="3.0" text="Player 1 " textFill="#b06612">
+            <Label layoutX="17.0" layoutY="3.0" text="Player : " textFill="WHITE">
                <font>
                   <Font name="Charter Black" size="35.0" />
                </font>
             </Label>
-            <HBox layoutX="21.0" layoutY="94.0" prefHeight="30.0" prefWidth="163.0">
+            <HBox layoutX="17.0" layoutY="49.0" prefHeight="30.0" prefWidth="163.0">
                <children>
-                  <Label text="VP = " textFill="#b06612">
+                  <Label text="VP = " textFill="WHITE">
                      <font>
                         <Font name="Charter Black" size="27.0" />
                      </font>
                   </Label>
-                  <Label text="3" textFill="#b06612">
+                  <Label fx:id="victoryPointsLabel" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="Charter Black" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label text="/7" textFill="WHITE">
                      <font>
                         <Font name="Charter Black" size="27.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
+            <Label layoutX="15.0" layoutY="92.0" text="Steps : " textFill="WHITE">
+               <font>
+                  <Font name="Charter Black" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="stepsLabel" layoutX="119.0" layoutY="92.0" textFill="WHITE">
+               <font>
+                  <Font name="Charter Black" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="137.0" layoutY="92.0" text="/2" textFill="WHITE">
+               <font>
+                  <Font name="Charter Black" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerLabel" layoutX="168.0" layoutY="3.0" textFill="WHITE">
+               <font>
+                  <Font name="Charter Black" size="35.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="750.0" prefWidth="290.0">
+      <AnchorPane prefHeight="750.0" prefWidth="292.0" />
+   </right>
+   <top>
+      <AnchorPane prefHeight="105.0" prefWidth="1554.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Player 2" textFill="#ab0900">
-               <font>
-                  <Font name="Charter Black" size="35.0" />
-               </font>
-            </Label>
-            <HBox layoutX="-2.0" layoutY="41.0" prefHeight="40.0" prefWidth="270.0">
+            <HBox fx:id="hboxWinner" layoutX="252.0" prefHeight="108.0" prefWidth="1109.0" style="-fx-background-color: #000; -fx-border-color: #fff;" visible="false">
                <children>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                     <fill>
-                        <RadialGradient centerX="0.278393351800554" centerY="0.3004750593824228" radius="0.7543352601156069">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.7599999904632568" green="0.13049285113811493" opacity="0.9300000071525574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.40789473056793213" green="0.3347506523132324" blue="0.25115740299224854" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </fill>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                     <fill>
-                        <RadialGradient centerX="0.278393351800554" centerY="0.3004750593824228" radius="0.7543352601156069">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.7599999904632568" green="0.13049285113811493" opacity="0.9300000071525574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.40789473056793213" green="0.3347506523132324" blue="0.25115740299224854" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </fill>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                     <fill>
-                        <RadialGradient centerX="0.278393351800554" centerY="0.3004750593824228" radius="0.7543352601156069">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.7599999904632568" green="0.13049285113811493" opacity="0.9300000071525574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.40789473056793213" green="0.3347506523132324" blue="0.25115740299224854" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </fill>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                     <fill>
-                        <RadialGradient centerX="0.278393351800554" centerY="0.3004750593824228" radius="0.7543352601156069">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.7599999904632568" green="0.13049285113811493" opacity="0.9300000071525574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.40789473056793213" green="0.3347506523132324" blue="0.25115740299224854" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </fill>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" fill="#59464226" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" fill="#59464226" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" HBox.hgrow="SOMETIMES">
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="30.0" arcWidth="13.0" fill="#59464226" height="30.0" stroke="BLACK" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" width="30.0" />
-               </children>
-            </HBox>
-            <HBox layoutX="2.0" layoutY="83.0" prefHeight="32.0" prefWidth="110.0">
-               <children>
-                  <Label text="VP = " textFill="#ab0900">
+                  <Button fx:id="playbtn" mnemonicParsing="false" onAction="#playAgain" style="-fx-background-color: #008a07;" text="Play again !" textFill="WHITE">
                      <font>
-                        <Font name="Charter Black" size="27.0" />
+                        <Font size="25.0" />
                      </font>
-                  </Label>
-                  <Label text="4" textFill="#b06612">
+                     <HBox.margin>
+                        <Insets right="50.0" top="20.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow radius="15.16" width="41.64">
+                           <color>
+                              <Color red="1.0" green="0.9907407164573669" blue="0.9907407164573669" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <ImageView fitHeight="78.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/winner.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="announceWinner" prefHeight="105.0" prefWidth="256.0" text="The winner is : " textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
                      <font>
-                        <Font name="Charter Black" size="27.0" />
+                        <Font size="40.0" />
                      </font>
+                     <textFill>
+                        <RadialGradient centerX="0.2673130193905817" centerY="0.5" focusAngle="-38.29" focusDistance="1.0" radius="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.7833333611488342" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
                   </Label>
+                  <Label fx:id="winnerLabel" prefHeight="103.0" prefWidth="255.0" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.2673130193905817" centerY="0.5" focusAngle="-38.29" focusDistance="1.0" radius="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.7833333611488342" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="78.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/winner.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="bntExit" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: #b20000;" text="Quitter" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" top="20.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow radius="15.16" width="41.64">
+                           <color>
+                              <Color red="1.0" green="0.9907407164573669" blue="0.9907407164573669" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
                </children>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <effect>
+                  <DropShadow height="29.84" radius="40.9525" width="135.97">
+                     <color>
+                        <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </HBox>
          </children>
       </AnchorPane>
-   </right>
+   </top>
 </BorderPane>

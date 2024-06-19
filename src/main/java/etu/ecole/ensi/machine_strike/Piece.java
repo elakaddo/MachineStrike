@@ -5,12 +5,57 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class Piece {
     private ImageView image;
     private String namePiece;
     private String PieceType;
+
+    private static final Map<String, PieceProperties> PIECE_PROPERTIES_MAP = new HashMap<>();
+
+    static {
+        PIECE_PROPERTIES_MAP.put("Charger", new PieceProperties(3, 0, 0, 0));
+        PIECE_PROPERTIES_MAP.put("Thunderjaw", new PieceProperties(3, 0, 0, 0));
+        PIECE_PROPERTIES_MAP.put("Scorcher", new PieceProperties(2, 0, 0, 0));
+        PIECE_PROPERTIES_MAP.put("Scrapper", new PieceProperties(2, 3, 2, 5));
+        PIECE_PROPERTIES_MAP.put("Longleg", new PieceProperties(2, 1, 2, 6));
+        PIECE_PROPERTIES_MAP.put("Behemoth", new PieceProperties(2, 3, 2, 10));
+        PIECE_PROPERTIES_MAP.put("Bellowback", new PieceProperties(2, 3, 2, 7));
+        PIECE_PROPERTIES_MAP.put("Elemental_Clawstrider", new PieceProperties(2, 3, 2, 8));
+        PIECE_PROPERTIES_MAP.put("Ravager", new PieceProperties(2, 2, 2, 9));
+        PIECE_PROPERTIES_MAP.put("Redeye_Watcher", new PieceProperties(2, 2, 2, 5));
+        PIECE_PROPERTIES_MAP.put("Rockbreaker", new PieceProperties(3, 3, 2, 9));
+        PIECE_PROPERTIES_MAP.put("Burrower", new PieceProperties(2, 2, 1, 4));
+        PIECE_PROPERTIES_MAP.put("Clawstrider", new PieceProperties(2, 3, 2, 8));
+        PIECE_PROPERTIES_MAP.put("Leaplasher", new PieceProperties(4, 1, 1, 3));
+        PIECE_PROPERTIES_MAP.put("Scrounger", new PieceProperties(3, 2, 1, 5));
+        PIECE_PROPERTIES_MAP.put("Apex_Clawstrider", new PieceProperties(2, 3, 1, 8));
+        PIECE_PROPERTIES_MAP.put("Clamberjaw", new PieceProperties(3, 3, 1, 8));
+        PIECE_PROPERTIES_MAP.put("Fireclaw", new PieceProperties(3, 4, 2, 10));
+        PIECE_PROPERTIES_MAP.put("Frostclaw", new PieceProperties(2, 4, 2, 10));
+        PIECE_PROPERTIES_MAP.put("Rollerback", new PieceProperties(3, 3, 2, 5));
+        PIECE_PROPERTIES_MAP.put("Shell-Walker", new PieceProperties(2, 2, 1, 7));
+        PIECE_PROPERTIES_MAP.put("Slaughterspine", new PieceProperties(2, 4, 1, 15));
+        PIECE_PROPERTIES_MAP.put("Spikesnout", new PieceProperties(2, 2, 1, 5));
+        PIECE_PROPERTIES_MAP.put("Stalker", new PieceProperties(3, 4, 2, 5));
+        PIECE_PROPERTIES_MAP.put("Tracker_Burrower", new PieceProperties(2, 2, 1, 4));
+        PIECE_PROPERTIES_MAP.put("Widemaw", new PieceProperties(2, 3, 2, 7));
+        PIECE_PROPERTIES_MAP.put("Shellsnapper", new PieceProperties(2, 3, 3, 10));
+        PIECE_PROPERTIES_MAP.put("Snapmaw", new PieceProperties(2, 3, 3, 7));
+        PIECE_PROPERTIES_MAP.put("Fanghorn", new PieceProperties(2, 2, 2, 5));
+        PIECE_PROPERTIES_MAP.put("Grazer", new PieceProperties(2, 1, 1, 4));
+        PIECE_PROPERTIES_MAP.put("Lancehorn", new PieceProperties(2, 2, 2, 5));
+        PIECE_PROPERTIES_MAP.put("Bristleback", new PieceProperties(3, 2, 1, 4));
+        PIECE_PROPERTIES_MAP.put("Plowhorn", new PieceProperties(2, 2, 1, 5));
+        PIECE_PROPERTIES_MAP.put("Glinthawk", new PieceProperties(3, 2, 3, 5));
+        PIECE_PROPERTIES_MAP.put("Skydrifter", new PieceProperties(2, 2, 3, 6));
+        PIECE_PROPERTIES_MAP.put("Dreadwing", new PieceProperties(2, 3, 3, 9));
+        PIECE_PROPERTIES_MAP.put("Sunwing", new PieceProperties(3, 2, 3, 7));
+    }
+
     private int power;
     private int range;
     private int mouvementRange;
@@ -19,7 +64,6 @@ public class Piece {
     private int row;
     private int col;
 
-    private boolean IsAlive = true;
     private double colorAdjut;
 
     public Piece(String namePiece , String PieceType, double colorAdjut, int row, int col) {
@@ -28,218 +72,15 @@ public class Piece {
         this.colorAdjut = colorAdjut;
         this.row = row;
         this.col = col;
-        if(namePiece.equals("Charger")){
-            mouvementRange= 3;
-        }
-        else if (namePiece.equals("Thunderjaw")){
-            mouvementRange=3;
-        }
-        else if (namePiece.equals("Scorcher")){
-            mouvementRange=2;
-        }
-        else if (namePiece.equals("Scrapper")){
-            mouvementRange=2;
-            power= 3;
-            range= 2;
-            health=5;
-        }
-        else if (namePiece.equals("Longleg")){
-            mouvementRange=2;
-            power= 1;
-            range= 2;
-            health=6;
-        }
-        else if (namePiece.equals("Behemoth")){
-            mouvementRange=2;
-            power= 3;
-            range= 2;
-            health=10;
-        }
-        else if (namePiece.equals("Bellowback")){
-            mouvementRange=2;
-            power= 3;
-            range= 2;
-            health=7;
-        }
-        else if (namePiece.equals("Elemental_Clawstrider")){
-            mouvementRange=2;
-            power= 3;
-            range= 2;
-            health=8;
-        }
-        else if (namePiece.equals("Ravager")){
-            mouvementRange=2;
-            power= 2;
-            range= 2;
-            health=9;
-        }
-        else if (namePiece.equals("Redeye_Watcher")){
-            mouvementRange=2;
-            power= 2;
-            range= 2;
-            health=5;
-        }
-        else if (namePiece.equals("Rockbreaker")){
-            mouvementRange=3;
-            power= 3;
-            range= 2;
-            health=9;
-        }
-        else if (namePiece.equals("Burrower")){
-            mouvementRange= 2;
-            power= 2;
-            range= 1;
-            health=4;
-        }
-        else if (namePiece.equals("Clawstrider")){
-            mouvementRange= 2;
-            power= 3;
-            range= 2;
-            health=8;
-        }
-        else if (namePiece.equals("Leaplasher")){
-            mouvementRange= 4;
-            power= 1;
-            range= 1;
-            health=3;
-        }
-        else if (namePiece.equals("Scrounger")){
-            mouvementRange= 3;
-            power= 2;
-            range= 1;
-            health=5;
-        }
-        else if (namePiece.equals("Apex_Clawstrider")){
-            mouvementRange= 2;
-            power= 3;
-            range= 1;
-            health=8;
-        }
-        else if (namePiece.equals("Clamberjaw")){
-            mouvementRange= 3;
-            power= 3;
-            range= 1;
-            health=8;
-        }
-        else if (namePiece.equals("Fireclaw")){
-            mouvementRange= 3;
-            power= 4;
-            range= 2;
-            health=10;
-        }
-        else if (namePiece.equals("Frostclaw")){
-            mouvementRange= 2;
-            power= 4;
-            range= 2;
-            health=10;
-        }
-        else if (namePiece.equals("Rollerback")){
-            mouvementRange= 3;
-            power= 3;
-            range= 2;
-            health=5;
-        }
-        else if (namePiece.equals("Shell-Walker")){
-            mouvementRange= 2;
-            power= 2;
-            range= 1;
-            health=7;
-        }
-        else if (namePiece.equals("Slaughterspine")){
-            mouvementRange= 2;
-            power= 4;
-            range= 1;
-            health=15;
-        }
-        else if (namePiece.equals("Spikesnout")){
-            mouvementRange= 2;
-            power= 2;
-            range= 1;
-            health=5;
-        }
-        else if (namePiece.equals("Stalker")){
-            mouvementRange= 3;
-            power= 4;
-            range= 2;
-            health=5;
-        }
-        else if (namePiece.equals("Tracker_Burrower")){
-            mouvementRange= 2;
-            power= 2;
-            range= 1;
-            health=4;
-        }
-        else if (namePiece.equals("Widemaw")){
-            mouvementRange= 2;
-            power= 3;
-            range= 2;
-            health=7;
-        }
-        else if (namePiece.equals("Shellsnapper")){
-            mouvementRange= 2;
-            power= 3;
-            range= 3;
-            health=10;
-        }
-        else if (namePiece.equals("Snapmaw")){
-            mouvementRange= 2;
-            power= 3;
-            range= 3;
-            health=7;
-        }
-        else if (namePiece.equals("Fanghorn")){
-            mouvementRange= 2;
-            power= 2;
-            range= 2;
-            health=5;
-        }
-        else if (namePiece.equals("Grazer")){
-            mouvementRange= 2;
-            power= 1;
-            range= 1;
-            health=4;
-        }
-        else if (namePiece.equals("Lancehorn")){
-            mouvementRange= 2;
-            power= 2;
-            range= 2;
-            health=5;
-        }
-        else if (namePiece.equals("Bristleback")){
-            mouvementRange= 3;
-            power= 2;
-            range= 1;
-            health= 4;
-        }
-        else if (namePiece.equals("Plowhorn")){
-            mouvementRange= 2;
-            power= 2;
-            range= 1;
-            health= 5;
-        }
-        else if (namePiece.equals("Glinthawk")){
-            mouvementRange= 3;
-            power= 2;
-            range= 3;
-            health= 5;
-        }
-        else if (namePiece.equals("Skydrifter")){
-            mouvementRange= 2;
-            power= 2;
-            range= 3;
-            health= 6;
-        }
-        else if (namePiece.equals("Dreadwing")){
-            mouvementRange= 2;
-            power= 3;
-            range= 3;
-            health= 9;
-        }
-        else if (namePiece.equals("Sunwing")){
-            mouvementRange= 3;
-            power= 2;
-            range= 3;
-            health= 7;
+
+        PieceProperties properties = PIECE_PROPERTIES_MAP.get(namePiece);
+        if (properties != null) {
+            this.mouvementRange = properties.getMouvementRange();
+            this.power = properties.getPower();
+            this.range = properties.getRange();
+            this.health = properties.getHealth();
+        } else {
+            throw new IllegalArgumentException("Unknown piece name: " + namePiece);
         }
     }
 
@@ -247,16 +88,19 @@ public class Piece {
      * Méthode qui affecte une image à une case de la grille
      * @author HADJOUDJ Nader
      * */
-    public void setImageToPiece(){
-        Image i = new Image(Objects.requireNonNull(getClass().getResource(this.getPathToImg(true))).toString());
+    public void setImageToPiece(Boolean isIcon){
+
+        Image i = new Image(Objects.requireNonNull(getClass().getResource(this.getPathToImg(isIcon))).toString());
         this.image = new ImageView(i);
-        this.image.setFitHeight(70);
-        this.image.setFitWidth(70);
-        ColorAdjust colorAdjust = new ColorAdjust();
-        colorAdjust.setHue(this.colorAdjut); // changer la couleur de la pièce
-        this.image.setEffect(colorAdjust);
-        Circle clip = new Circle(35, 35, 35);
-        this.image.setClip(clip);
+        if (isIcon) {
+            this.image.setFitHeight(70);
+            this.image.setFitWidth(70);
+            ColorAdjust colorAdjust = new ColorAdjust();
+            colorAdjust.setHue(this.colorAdjut); // changer la couleur de la pièce
+            this.image.setEffect(colorAdjust);
+            Circle clip = new Circle(35, 35, 35);
+            this.image.setClip(clip);
+        }
     }
 
     public String getPathToImg(Boolean isIcon) {
@@ -275,19 +119,10 @@ public class Piece {
         return PieceType;
     }
 
-    public ImageView getImagePiece() {
-
-        setImageToPiece();
+    public ImageView getImagePiece(Boolean isIcon) {
+        setImageToPiece(isIcon);
         this.image.setMouseTransparent(true);
         return this.image;
-    }
-
-    public void life_status(boolean isalive){
-        this.IsAlive= isalive;
-    }
-
-    public boolean getIsAlive(){
-        return this.IsAlive;
     }
 
 
@@ -300,8 +135,6 @@ public class Piece {
     {
         return col;
     }
-
-
 
     public void setPositionXY(int positionX, int positionY) {
         this.row = positionX;
