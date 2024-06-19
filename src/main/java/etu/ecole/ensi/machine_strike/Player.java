@@ -56,17 +56,23 @@ public class Player {
      * @param piece la pièce à ajouter au joueur
      * */
     public void addPiece(Piece piece){
-        listePieces.add(piece);
-        nbPieces++;
+        if (!this.getListePieces().contains(piece))
+        {
+            listePieces.add(piece);
+            nbPieces++;
+        }
     }
 
     /**
-     * Méthode qui ajoute ue pièce à la liste des pièces de joueur
+     * Méthode qui supprime ue pièce à la liste des pièces de joueur
      * @param piece la pièce à ajouter au joueur
      * */
     public void removePiece(Piece piece){
-        listePieces.remove(piece);
-        nbPieces--;
+        if (this.getListePieces().contains(piece))
+        {
+            listePieces.remove(piece);
+            nbPieces--;
+        }
     }
 
     /**
