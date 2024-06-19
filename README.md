@@ -1,6 +1,10 @@
+
 # Machine Strike Game
 
+![logo jeu](logo.jpg)
+
 ## Description
+
 Machine Strike est un jeu de stratégie où les joueurs s'affrontent avec leur pièces avec des capacités et des pouvoirs spécifiques. Ce projet a été développé par : 
 - Mohamed AKADDAR
 - Nader HADJOUDJ
