@@ -259,7 +259,7 @@ public class MachineStrikeController {
     /**
      * Méthode qui change la couleur des terrains dominés par une pièce
      * @author AKADDAR Mohamed
-     * @param dist la distance hamming
+     * @param p la piece dominante
      * */
     public void changeTerrainsDominated(Piece p){
         for (var node : gridMachineStrike.getChildren()) {
