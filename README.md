@@ -72,11 +72,11 @@ et encadré par :
 ## Capture d'Écran
 - Début de partie ! 🤩
 
-![Capture d'écran du jeu](path/to/screenshot.png)
+![Capture d'écran du jeu](start.png)
 
 - Fin de partie ! - un gagnant 🏆 
 
-![Capture d'écran du jeu](path/to/screenshot.png)
+![Capture d'écran du jeu](end.png)
 
 
 ## Remerciements
