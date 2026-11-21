@@ -25,10 +25,7 @@ Java & JavaFX & XML ont été les technologies principales utilisées pour ce pr
 - [Remerciements](#remerciements)
 
 ## Manuel Lancer jeu
-**Deux possibilités :**
-1.  `Avec l'exécutable` : Accédez au 'build/distributions/MachineStrike*SNAPSHOT/bin/'. Ensuite, lancer l'exécutable. ✅
-
-2. `Avec IntelliJ` : ouvrez le projet, build puis run ✅
+2. `Avec IntelliJ` : Ouvrez le projet, build puis run ✅
 
 
 ## Classes (Business logic)
