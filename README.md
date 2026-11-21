@@ -7,10 +7,12 @@
 
 Machine Strike est un jeu de stratégie où les joueurs s'affrontent avec leur pièces avec des capacités et des pouvoirs spécifiques. Ce projet a été développé par : 
 - Mohamed AKADDAR
-- Nader HADJOUDJ
 
-et encadré par : 
-- M. FAYE Ndiaga
+## Pourquoi ce projet a été réalisé ?
+Ce projet a été réalisé dans le but d'approfondir mes connaissances en programmation orientée objet et en développement de jeux vidéo. Il m'a permis de mettre en pratique des concepts tels que la gestion des événements, la manipulation des images et l'implémentation de la logique de jeu.
+Java & JavaFX & XML ont été les technologies principales utilisées pour ce projet, offrant une expérience de développement riche et interactive.
+---
+
 
 ## Table des Matières
 - [Fonctionnalités réalisées](#fonctionnalités-réalisées)
@@ -22,27 +24,14 @@ et encadré par :
 - [Contribution](#contribution)
 - [Remerciements](#remerciements)
 
-## Manuel Lancer jeu 
-- **2 possibilités**
+## Manuel Lancer jeu
+**Deux possibilités :**
 1.  `Avec l'exécutable` : Accédez au 'build/distributions/MachineStrike*SNAPSHOT/bin/'. Ensuite, lancer l'exécutable. ✅
-
 
 2. `Avec IntelliJ` : ouvrez le projet, build puis run ✅
 
-## Répartition des Tâches
-- **Nader HADJOUDJ** : 
 
-- - Recherche sur les règles de jeu, et conception UML.
-- - Implémenter fonctionnalités souris entrante - afficher image de la Piece.
-- - Proposition de design de l'interface graphique.
-- - Commit et push au git - Gitlab via IntelliJ.
-
-- **Mohamed AKADDAR** : 
-- - Développement de l'interface graphique.
-- - Implémentation de fontionnalités de jeu en controlleur.
-- - Conception UML.
-
-## Classes
+## Classes (Business logic)
 - `Tile` : Représente le terrain et la gestion de son image.
 - `Piece` : Représente la pièce dans le jeu et la gestion de son image.
 - `PieceProperties` : Représente les propriétés de la pièce (MouvementRange, power ...)
@@ -83,12 +72,5 @@ et encadré par :
 ![Capture d'écran du jeu](end.png)
 
 
-## Remerciements
-Merci à M. FAYE Ndiaga de nous encadrer et nous mettre toujours dans le bon chemin, ainsi la proposition des indications pour résoudre nos problèmes rencontrés lors du développement du jeu. 
-Un grand merci également aux profs M. Reynaud, M. Vernois et M. ROGER pour leur soutien et le suivi d'avancement, ainsi leurs retours.
-
----
-
 Pour toute question ou suggestion, n'hésitez pas à nous contacter l'un des développeurs : 
 - [mohamed.akaddar@ecole.ensicaen.fr](mailto:mohamed.akaddar@ecole.ensicaen.fr)
-- [nader.hadjoudj@ecole.ensicaen.fr](mailto:nader.hadjoudj@ecole.ensicaen.fr ).
