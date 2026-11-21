@@ -8,11 +8,10 @@
 Machine Strike est un jeu de stratégie où les joueurs s'affrontent avec leur pièces avec des capacités et des pouvoirs spécifiques. Ce projet a été développé par : 
 - Mohamed AKADDAR
 
+
 ## Pourquoi ce projet a été réalisé ?
 
-Ce projet a été réalisé dans le but d'approfondir mes connaissances en programmation orientée objet et en développement de jeux vidéo. Il m'a permis de mettre en pratique des concepts tels que la gestion des événements, la manipulation des images et l'implémentation de la logique de jeu.
-Java & JavaFX & XML ont été les technologies principales utilisées pour ce projet, offrant une expérience de développement riche et interactive.
----
+Ce projet a été réalisé dans le but d'approfondir mes connaissances en programmation orientée objet et en développement de jeux vidéo. Il m'a permis de mettre en pratique des concepts tels que la gestion des événements, la manipulation des images et l'implémentation de la logique de jeu. Java & JavaFX & XML ont été les technologies principales utilisées pour ce projet, offrant une expérience de développement riche et interactive.
 
 
 ## Table des Matières
